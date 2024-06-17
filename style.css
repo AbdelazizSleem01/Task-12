@@ -1,6 +1,12 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    background-color: black;
+body {
+    margin: 0;
+    padding: 0;
 }
 
 /* ================ title-1 ================= */
@@ -24,15 +30,6 @@ body {
     0% {
         color: rgb(255, 140, 0);
         transform: translateY(10px);
-    }
-
-    25% {
-        color: rgb(0, 113, 23);
-    }
-
-    50% {
-        color: rgb(255, 255, 255);
-
     }
 
     100% {
@@ -79,7 +76,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 78vh;
+    height: 100vh;
 
 
     p {
@@ -93,7 +90,7 @@ body {
     .div-1,
     .div-2,
     .div-3 {
-        animation: animation infinite alternate ease-in-out;
+        animation: animation infinite alternate-reverse ease-in-out;
         animation-play-state: running;
         animation-duration: .9s;
         background-color: white;
@@ -151,7 +148,7 @@ body {
     .div-5,
     .div-6 {
 
-        animation: scale infinite alternate ease-in-out;
+        animation: scale infinite alternate-reverse ease-in-out;
         animation-play-state: running;
         background-color: rgb(0, 76, 255);
         animation-duration: 1s;
@@ -188,5 +185,86 @@ body {
     to {
         transform: scale(.3);
         background-color: rgb(255, 0, 0);
+    }
+}
+
+/* ============================================= */
+
+
+.Circle-sec {
+    height: 100vh;
+    .sec-3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .title-3 {
+        color: rgb(0, 0, 0);
+        font-size: 50px;
+        text-align: center;
+        font-family: 'Press Start 2P', cursive;
+        font-weight: bold;
+        animation: titleTwo infinite alternate ease-in-out;
+        animation-play-state: running;
+        animation-duration: 1s;
+    }
+
+    p {
+        width: 0px;
+        height: 0px;
+        border-radius: 50%;
+        margin: 0;
+        border: 5px solid rgb(235, 141, 0);
+        position: absolute;
+        margin-top: 350px;       
+        box-shadow: 1px 2px 10px black; 
+    }
+
+    .div-1,
+    .div-2,
+    .div-3,
+    .div-4,
+    .div-5,
+    .div-6 {
+
+        animation: circle infinite   ;
+        animation-play-state: running;
+        animation-duration: 2s;
+
+    }
+
+    .div-2 {
+        animation-delay: .5s;
+    }
+
+    .div-3 {
+        animation-delay: 1s;
+    }
+
+    .div-4 {
+        animation-delay: 1.5s;
+    }
+
+    .div-5 {
+        animation-delay: 2s;
+    }
+
+    .div-6 {
+        animation-delay: 2.5s;
+    }
+}
+
+
+@keyframes circle {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 22%;
+        height: 40%;
+        opacity: 0;
+        display: none;
     }
 }
